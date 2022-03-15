@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+    color: hsla(0, 0%, 100%, 0.7);
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    align-content: stretch;
+    background-color: hsl(244, 38%, 16%);
+    width: 90%;
+    border-radius: 10px;
+}
+
+#maincontainer {
+    flex: 1;
+}
+
+#maininner {
+    margin: 3rem 8rem 0 5rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Lexend Deca';
+    font-weight: 700;
+}
+
+#desc {
+    margin: 1em 0;
+    line-height: 1.5rem;
+}
+
+.stat {
+    margin-top: 1.5rem;
+}
+
+.statnum {
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Lexend Deca';
+}
+
+#statscontainer {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+#herocontainer {
+    flex: 1;
+    position: relative;
+    float: left;
+}
+
+#herocontainer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: hsla(277, 100%, 50%, 0.5);
+    border-radius: 0 10px 10px 0;
+}
+
+#heroimage {
+    width: 100%;
+    border: 0;
+    display: block;
+    border-radius: 0 10px 10px 0;
+}
+
+.accent {
+    color: hsl(277, 64%, 61%);
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+        width: 375px;
+    }
+
+    #maincontainer {
+        order: 1;
+    }
+
+    #maininner {
+        margin: 2rem;
+    }
+
+    #statscontainer {
+        flex-direction: column;
+    }
+
+    #heroimage {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #herocontainer::before {
+        border-radius: 10px 10px 0 0;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
